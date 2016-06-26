@@ -27,8 +27,6 @@ module.exports = function (grunt) {
                         'angular/angular.js',
                         'angular-route/angular-route.js',
                         'angular-animate/angular-animate.js',
-                        'angular-sanitize/angular-sanitize.js',
-                        'angular-youtube-embed/dist/angular-youtube-embed.min.js',
                     ],
                     dest: 'build/node_modules'
                 }]
@@ -77,16 +75,8 @@ module.exports = function (grunt) {
                 },
             },
         },
-        browserify: {
-            dist: {
-                files: {
-                    'build/bundle.js': [ 'src/exports.js' ]
-                }
-            }
-        }
     });
 
-    grunt.loadNpmTasks('grunt-browserify');
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-contrib-copy');
@@ -97,7 +87,6 @@ module.exports = function (grunt) {
     grunt.registerTask('build', [
         'clean',
         'build-incremental',
-        'browserify',
     ])
 
     grunt.registerTask('build-incremental', [

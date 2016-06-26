@@ -1,7 +1,6 @@
 ﻿var indexApp = angular.module('indexApp', [
     'ngRoute',
     'ngAnimate',
-    'ngSanitize',
     'directives',
     'services',
 ]);

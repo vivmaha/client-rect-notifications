@@ -1,0 +1,30 @@
+
+$page-padding:140px;
+@import "modules/modules.scss";
+
+.page-home {
+
+    &>.background {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        z-index: -1;
+    }
+
+    // >:nth-child(2) {
+    //     margin-bottom: 80px;
+    // }
+
+    .todo {
+        height: 50vh;
+        font-size: 40px;
+        border:5px black dashed;
+        background-color: #f7f7f7;
+        line-height: 50vh;
+        text-align: center;
+        font-family: 'Indie Flower', cursive;
+    }
+
+}

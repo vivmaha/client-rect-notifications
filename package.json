@@ -1,0 +1,23 @@
+{
+  "name": "ng-ui-client-rect-notifications",
+  "version": "0.0.1",
+  "description": "An angular directive that provides notifications for changes in the position of an HTML element relative to the viewport.",
+  "main": "index.html",
+  "dependencies": {},
+  "devDependencies": {
+    "angular": "^1.4.9",
+    "angular-animate": "^1.4.9",
+    "angular-route": "^1.4.9",
+    "autoprefixer": "^6.3.1",
+    "grunt": "^1.0.1",
+    "grunt-cli": "^1.2.0",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-connect": "^1.0.1",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-postcss": "^0.8.0",
+    "grunt-sass": "^1.1.0",
+  },
+  "author": "Vivek Maharajh",
+  "license": "MIT"
+}

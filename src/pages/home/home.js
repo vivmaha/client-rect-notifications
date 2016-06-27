@@ -2,8 +2,8 @@ indexApp.controller(
     'pageHome', 
     [
         '$scope',
-        'clientRectNotifications',
-        function($scope, clientRectNotifications) {
+        'ngUiClientRectNotifications',
+        function($scope, ngUiClientRectNotifications) {
             var trackerElement = document.getElementsByClassName('tracker')[0];
 
             $scope.notifications = [];
@@ -15,7 +15,7 @@ indexApp.controller(
                 $scope.$apply();
             }
 
-            clientRectNotifications.register(
+            ngUiClientRectNotifications.register(
                 trackerElement,
                 {
                     completelyOutOfView : function() {

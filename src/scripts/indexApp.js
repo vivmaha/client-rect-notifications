@@ -2,7 +2,8 @@
     'ngRoute',
     'ngAnimate',
     'directives',
-    'services',
+    'ngUiThrottledEventListener',
+    'ngUiClientRectNotifications',
 ]);
 
 indexApp.config(['$routeProvider', '$compileProvider',

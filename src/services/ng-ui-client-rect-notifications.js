@@ -1,9 +1,8 @@
 angular
-    .module('ngUiClientRectNotifications', ['ngUiThrottledEventListener'])
+    .module('ngUiClientRectNotifications', [])
     .service('ngUiClientRectNotifications',  
-        [ 
-        'ngUiThrottledEventListener',
-        function(ngUiThrottledEventListener) {
+        [
+        function() {
             this.register = function (element, notifications) {
 
                 var states = {
@@ -38,7 +37,7 @@ angular
                     state.notifier = notifications[stateKey];
                 }
                 
-                ngUiThrottledEventListener.add('scroll', 100, function() {
+                addThrottledEventListener('scroll', 100, function() {
                     var elementClientRect = element.getBoundingClientRect(); 
                     var elementTop = elementClientRect.top;
                     var elementBot = elementClientRect.bottom;

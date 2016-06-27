@@ -2,7 +2,21 @@
   "name": "client-rect-notifications",
   "version": "0.0.1",
   "description": "Provides notifications for changes in the position of an HTML element relative to the viewport.",
-  "main": "index.html",
+  "keywords": [
+    "getboundingclientrect",
+    "htmlElement",
+    "rect",
+    "client",
+    "bounding",
+    "window",
+    "viewport",
+    "visible",
+    "view",
+    "notifications",
+    "callback"
+  ],
+  "homepage": "https://vivmaha.github.io/client-rect-notifications",
+  "main": "src/modules/client-rect-notifications",
   "dependencies": {},
   "devDependencies": {
     "angular": "^1.4.9",
@@ -20,10 +34,17 @@
     "grunt-postcss": "^0.8.0",
     "grunt-sass": "^1.1.0"
   },
-  "author": "Vivek Maharajh",
+  "author": { 
+    "name" : "Vivek Maharajh",
+    "email" : "vivmaha@live.com"
+  },
+  "files": [
+    "src/modules/client-rect-notifications.js",
+    "src/modules/throttled-event-listener.js"
+  ],
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/vivmaha/ng-ui-client-rect-notifications.git"
+    "url": "https://github.com/vivmaha/client-rect-notifications.git"
   }
 }

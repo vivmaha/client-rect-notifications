@@ -14,7 +14,8 @@ module.exports = function (grunt) {
                     cwd: 'src/',
                     src: [
                         '**',
-                        '!**.scss'
+                        '!**.scss',
+                        '!**.js',
                     ],
                     dest: 'build/'
                 }]
@@ -75,8 +76,29 @@ module.exports = function (grunt) {
                 },
             },
         },
+        babel: {
+            options: {
+                sourceMap: true,
+                presets: ['es2015']
+            },
+            files: {
+                expand: true,
+                cwd: "src",
+                src: "**/*.js",
+                dest: "build_temp/babel"
+            },
+        },
+        browserify: {
+            dist: {
+                files: {
+                    'build/module.js': ['src/**/*.js']
+                }
+            }
+        }
     });
 
+    grunt.loadNpmTasks('grunt-browserify');
+    //grunt.loadNpmTasks('grunt-babel');
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-contrib-copy');
@@ -91,6 +113,7 @@ module.exports = function (grunt) {
 
     grunt.registerTask('build-incremental', [
         'copy',
+        'browserify',
         'sass',
         'postcss',
     ])

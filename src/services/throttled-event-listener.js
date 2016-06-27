@@ -1,4 +1,4 @@
-function addThrottledEventListener(
+exports.add = function(
     type,
     timeout,
     listener,

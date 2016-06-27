@@ -1,4 +1,6 @@
-indexApp.controller(
+var app = require('../../scripts/indexApp').app;
+
+app.controller(
     'pageHome', 
     [
         '$scope',
@@ -20,19 +22,15 @@ indexApp.controller(
                 {
                     completelyOutOfView : function() {
                         OnNotification('completelyOutOfView');
-                        console.log('completelyOutOfView');
                     }, 
                     completelyInView : function() {
                         OnNotification('completelyInView');
-                        console.log('completelyInView');
                     },
                     mostlyInView : function() {
                         OnNotification('mostlyInView');
-                        console.log('mostlyInView');
                     },
                     partiallyInView : function() {
                         OnNotification('partiallyInView');
-                        console.log('partiallyInView');
                     }
                 }
             );

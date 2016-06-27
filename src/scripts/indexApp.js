@@ -1,11 +1,11 @@
-﻿var indexApp = angular.module('indexApp', [
+﻿exports.app = angular.module('indexApp', [
     'ngRoute',
     'ngAnimate',
     'directives',
     'ngUiClientRectNotifications',
 ]);
 
-indexApp.config(['$routeProvider', '$compileProvider',
+exports.app.config(['$routeProvider', '$compileProvider',
     function ($routeProvider, $compileProvider) {
         $routeProvider.when('/', {
             templateUrl: 'pages/home/home.html',

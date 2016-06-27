@@ -36,8 +36,10 @@ angular
                     var state = states[stateKey];
                     state.notifier = notifications[stateKey];
                 }
+
+                var throttledEventListener = require('./throttled-event-listener');
                 
-                addThrottledEventListener('scroll', 100, function() {
+                throttledEventListener.add('scroll', 100, function() {
                     var elementClientRect = element.getBoundingClientRect(); 
                     var elementTop = elementClientRect.top;
                     var elementBot = elementClientRect.bottom;

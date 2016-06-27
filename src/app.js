@@ -1,8 +1,5 @@
-﻿exports.app = angular.module('indexApp', [
+exports.app = angular.module('app', [
     'ngRoute',
-    'ngAnimate',
-    'directives',
-    'ngUiClientRectNotifications',
 ]);
 
 exports.app.config(['$routeProvider', '$compileProvider',

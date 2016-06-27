@@ -1,7 +1,23 @@
 module.exports = function (grunt) {
     grunt.initConfig({
-        pkg: grunt.file.readJSON('package.json'),
-
+        pkg: grunt.file.readJSON('package.json'),        
+        browserify: {
+            dist: {
+                files: {
+                    'build/module.js': ['src/**/*.js']
+                }
+            }
+        },
+        connect: {
+            server: {
+                options: {
+                    port: 9001,
+                    base: './build',                    
+                    livereload: true,
+                    hostname:'localhost',
+                },
+            },
+        },
         clean: {
             build: {
                 src: ["build/"]
@@ -66,39 +82,9 @@ module.exports = function (grunt) {
                 }
             },
         },
-        connect: {
-            server: {
-                options: {
-                    port: 9001,
-                    base: './build',                    
-                    livereload: true,
-                    hostname:'localhost',
-                },
-            },
-        },
-        babel: {
-            options: {
-                sourceMap: true,
-                presets: ['es2015']
-            },
-            files: {
-                expand: true,
-                cwd: "src",
-                src: "**/*.js",
-                dest: "build_temp/babel"
-            },
-        },
-        browserify: {
-            dist: {
-                files: {
-                    'build/module.js': ['src/**/*.js']
-                }
-            }
-        }
     });
 
     grunt.loadNpmTasks('grunt-browserify');
-    //grunt.loadNpmTasks('grunt-babel');
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-contrib-copy');
@@ -108,10 +94,6 @@ module.exports = function (grunt) {
 
     grunt.registerTask('build', [
         'clean',
-        'build-incremental',
-    ])
-
-    grunt.registerTask('build-incremental', [
         'copy',
         'browserify',
         'sass',

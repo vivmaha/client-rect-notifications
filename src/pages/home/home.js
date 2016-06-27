@@ -1,12 +1,11 @@
 (function() {
 
-    var app = require('../../scripts/indexApp').app;
+    var app = require('../../app').app;
     app.controller(
         'pageHome', 
         [
             '$scope',
-            'ngUiClientRectNotifications',
-            function($scope, ngUiClientRectNotifications) {
+            function($scope) {
                 var trackerElement = document.getElementsByClassName('tracker')[0];
 
                 $scope.notifications = [];
@@ -18,7 +17,8 @@
                     $scope.$apply();
                 }
 
-                ngUiClientRectNotifications.register(
+                var clientRectNotifications = require('../../modules/client-rect-notifications');
+                clientRectNotifications.add(
                     trackerElement,
                     {
                         completelyOutOfView : function() {

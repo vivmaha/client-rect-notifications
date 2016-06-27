@@ -1,3 +1,43 @@
 .page-home {
+    $margin-horz: 10vw;
 
+    font-family: 'Indie Flower', cursive;
+
+    &>:nth-child(1) {
+        
+        margin-left: $margin-horz;
+
+        &>p {
+            width: 40vw;
+            &>em {
+                font-weight: bold;
+            }
+        }
+
+        &>div {
+            height: 20vh;
+            width: 20vw;
+            background-color: #222222;
+            margin-top: 120vh;
+            margin-bottom: 120vh;
+        }
+    }
+
+    &>:nth-child(2) {        
+        position: fixed;
+        top: 0;
+        right:$margin-horz;
+        &>ol {
+            padding: 0;
+            list-style: none;
+            font-family: 'Inconsolata';
+            font-size: 1.5em;
+            $max-notifications: 20;
+            @for $i from 1 through $max-notifications {
+                :nth-child(#{$i}) {
+                    opacity: 1 - ($i / $max-notifications);
+                }
+            }
+        }
+    }
 }

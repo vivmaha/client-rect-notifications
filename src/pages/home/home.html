@@ -1,2 +1,16 @@
 <main class="page-home">
+    <section>
+        <h1>Client Rect Notifications</h1>
+        <p><em>Scroll down.</em> As the black box moves into and out of the viewport, you'll see the notifications to the right.</p>
+        <div class="tracker">
+        </div>
+    </section>
+    <section>
+        <h2>Notifications:</h2>
+        <ol class="notifications">
+            <li ng-repeat="notification in notifications track by $index">
+                {{notification}}()
+            </li>
+        </ol>
+    </section>
 </main>

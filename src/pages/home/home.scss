@@ -2,13 +2,25 @@
     $margin-horz: 10vw;
 
     font-family: 'Indie Flower', cursive;
+    font-size: 14px;
 
-    &>:nth-child(1) {
-        
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.75em;
+    }
+
+    p, li {
+        font-size: 1.5em;
+    }
+
+    &>:nth-child(2) {        
         margin-left: $margin-horz;
-
         &>p {
             width: 40vw;
+            font-size: 1.5em;
             &>em {
                 font-weight: bold;
             }
@@ -23,7 +35,7 @@
         }
     }
 
-    &>:nth-child(2) {        
+    &>:nth-child(3) {        
         position: fixed;
         top: 0;
         right:$margin-horz;
@@ -31,7 +43,6 @@
             padding: 0;
             list-style: none;
             font-family: 'Inconsolata';
-            font-size: 1.5em;
             $max-notifications: 20;
             @for $i from 1 through $max-notifications {
                 :nth-child(#{$i}) {

@@ -1,6 +1,6 @@
 {
   "name": "client-rect-notifications",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Provides notifications for changes in the position of an HTML element relative to the viewport.",
   "keywords": [
     "getboundingclientrect",
@@ -33,7 +33,7 @@
     "grunt-contrib-watch": "^1.0.0",
     "grunt-postcss": "^0.8.0",
     "grunt-sass": "^1.1.0",
-    "throttled-event-listener": "0.0.2"
+    "throttled-event-listener": "0.0.1"
   },
   "author": {
     "name": "Vivek Maharajh",

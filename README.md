@@ -1,7 +1,7 @@
 # client-rect-notifications
 Provides notifications for changes in the position of an HTML element relative to the viewport.
 
-[demo](https://vivmaha.github.io/client-rect-notifications)
+# [Demo](https://vivmaha.github.io/client-rect-notifications)
 
 # Install
 

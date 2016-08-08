@@ -41,8 +41,7 @@
     "email": "vivmaha@live.com"
   },
   "files": [
-    "src/modules/client-rect-notifications.js",
-    "src/modules/throttled-event-listener.js"
+    "src/modules/client-rect-notifications.js"
   ],
   "license": "MIT",
   "repository": {
